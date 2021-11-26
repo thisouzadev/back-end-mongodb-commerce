@@ -1,5 +1,5 @@
 db.produtos.updateMany(
-  {nome: {$eq: "Cheddar McMelt"}},
+  { nome: { $eq: "Cheddar McMelt" } },
   { $pop: { ingredientes: 1 } }, // Para remover o ultimo elemento do array items
 );
 

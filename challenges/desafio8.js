@@ -1,5 +1,5 @@
 db.produtos.updateMany(
-  {nome: {$eq: "Quarteirão com Queijo"}},
+  { nome: { $eq: "Quarteirão com Queijo" } },
   { $pop: { ingredientes: -1 } }, // Para remover o primeiro elemento do array items
 );
 
