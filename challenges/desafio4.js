@@ -3,7 +3,5 @@ db.produtos.updateOne(
   { $currentDate: { ultimaModificacao: true } },
 );
 
-db.produtos.find({
-  ultimaModificacao: { $ne: null } // $exists: true
-},
+db.produtos.find({ ultimaModificacao: { $ne: null } }, // $exists: true
   { _id: 0, nome: 1 });
