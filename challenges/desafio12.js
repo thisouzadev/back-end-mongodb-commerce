@@ -1,6 +1,12 @@
 db.produtos.updateMany(
   {},
-  { $push: { valoresNutricionais: { $each: [], $sort: -1 } } }
+  {
+    $push: {
+      valoresNutricionais: {
+        $each: [], $sort: -1
+      },
+    },
+  },
 );
 
 db.produtos.find(
